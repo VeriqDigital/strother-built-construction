@@ -1,59 +1,22 @@
-import type { ModalType } from "@/components/layout/LeadModal";
-
 export const siteConfig = {
-  name: "Squeaky Clean Services",
-  shortName: "Squeaky Clean",
-  brandName: "Roberts Revive Services",
-  tagline: "Bring Your Property Back to Life.",
+  name: "Strother Built Construction",
   description:
-    "Professional soft washing, roof washing, concrete and surface cleaning, gutter brightening, window cleaning, and property maintenance serving Donnellson and Southeast Iowa.",
-  locale: "en_US",
-  location: {
-    address: "1410 Highway 2",
-    businessCity: "Donnellson",
-    businessState: "Iowa",
-    postalCode: "52627",
-    serviceAreaLabel: "Serving Lee County, Des Moines County & Southeast Iowa",
-  },
+    "Explore kitchen, bathroom, basement, whole-home remodeling, and home additions from Strother Built Construction in the Greater Des Moines area.",
+  businessUrl: "https://www.strotherbuiltconstruction.com",
+  previewOrigin: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   contact: {
-    phone: "(319) 371-7805",
-    phoneHref: "tel:+13193717805",
-    smsHref: "sms:+13193717805",
-    email: "squeakycleanservices2023@gmail.com",
-    emailHref: "mailto:squeakycleanservices2023@gmail.com",
+    email: "info@strotherbuiltconstruction.com",
+    emailHref: "mailto:info@strotherbuiltconstruction.com",
   },
-  forms: {
-    recipientEmail: "squeakycleanservices2023@gmail.com",
-    quoteSubject: "New estimate request for Squeaky Clean Services",
-    contactSubject: "New website message for Squeaky Clean Services",
-    deliveryConfigured: false,
-  },
+  serviceArea: "Greater Des Moines & Central Iowa",
 } as const;
-
-export type NavItem =
-  | { label: string; href: string }
-  | { label: string; modal: ModalType };
-
-export const navigation: NavItem[] = [
-  { label: "Home", href: "/" },
+export const navigation = [
   { label: "Services", href: "/services" },
+  { label: "Our Work", href: "/#our-work" },
   { label: "About", href: "/about" },
-  { label: "Service Area", href: "/#service-area" },
-  { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
-];
-
-export const footerLinks: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Service Area", href: "/#service-area" },
-  { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/contact" },
-  { label: "Get a Free Estimate", modal: "service" },
-];
-
+] as const;
 export const primaryCta = {
-  label: "Get a Free Estimate",
+  label: "Start Your Project",
   modal: "service",
-} as const satisfies { label: string; modal: ModalType };
+} as const;

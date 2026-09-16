@@ -1,40 +1,31 @@
-import AboutIntro from "@/components/sections/AboutIntro";
-import ContactCtaSection from "@/components/sections/ContactCtaSection";
-import FAQ from "@/components/sections/FAQ";
 import Hero from "@/components/sections/Hero";
-import LocationSection from "@/components/sections/LocationSection";
-import ProcessSection from "@/components/sections/ProcessSection";
+import AboutIntro from "@/components/sections/AboutIntro";
 import ProjectShowcase from "@/components/sections/ProjectShowcase";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TrustStrip from "@/components/sections/TrustStrip";
+import WhyStrother from "@/components/sections/WhyStrother";
+import LocationSection from "@/components/sections/LocationSection";
+import ContactCtaSection from "@/components/sections/ContactCtaSection";
 import Section from "@/components/ui/Section";
-
 export default function Home() {
   return (
-    <main>
+    <main id="main-content">
       <Hero />
-      <TrustStrip />
-      <Section id="about" tone="white">
-        <AboutIntro homepage={true} />
+      <Section id="introduction">
+        <AboutIntro />
       </Section>
-      <Section id="services" tone="cream">
-        <ServicesSection />
-      </Section>
-      <Section tone="white" className="border-t border-(--border)">
+      <Section id="our-work" tone="white">
         <ProjectShowcase />
       </Section>
-      <Section id="process" tone="white" className="border-y border-(--border)">
-        <ProcessSection />
+      <Section id="services">
+        <ServicesSection />
       </Section>
-      <Section tone="cream">
-        <ContactCtaSection />
+      <Section tone="stone">
+        <WhyStrother />
       </Section>
-      <Section id="service-area" tone="white">
+      <Section id="service-area">
         <LocationSection />
       </Section>
-      <Section id="faq" tone="blue">
-        <FAQ />
-      </Section>
+      <ContactCtaSection />
     </main>
   );
 }

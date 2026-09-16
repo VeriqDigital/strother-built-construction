@@ -1,44 +1,45 @@
-import type { Metadata } from "next";
-import ContactCtaSection from "@/components/sections/ContactCtaSection";
-import LocationSection from "@/components/sections/LocationSection";
-import Button from "@/components/ui/Button";
-import Section from "@/components/ui/Section";
+import { pageMetadata } from "@/config/metadata";
 import { siteConfig } from "@/config/site";
-
-export const metadata: Metadata = {
-  title: "Contact & Get a Free Estimate",
-  description:
-    "Request an estimate for exterior property, vehicle, or fleet cleaning from Squeaky Clean Services in Donnellson and Southeast Iowa.",
-};
-
+import Section from "@/components/ui/Section";
+import InquiryForm from "@/components/layout/InquiryForm";
+import LocationSection from "@/components/sections/LocationSection";
+export const metadata = pageMetadata(
+  "Start Your Project",
+  "Tell Strother Built Construction about your kitchen, bathroom, basement, whole-home remodel, or addition in the Greater Des Moines area.",
+);
 export default function ContactPage() {
   return (
-    <main>
-      <Section tone="cream" className="pt-12 sm:pt-16">
-        <div className="grid items-end gap-10 border-b-2 border-(--navy) pb-10 lg:grid-cols-[1fr_auto]">
-          <div>
-            <p className="border-l-4 border-(--blue) pl-3 font-heading text-sm font-bold uppercase tracking-[0.12em] text-(--navy)">
-              Contact Squeaky Clean
-            </p>
-            <h1 className="mt-6 max-w-3xl font-heading text-[clamp(3.6rem,6vw,5.8rem)] font-extrabold leading-[0.88] text-(--navy)">
-              Let’s Talk About Your Property.
+    <main id="main-content">
+      <Section className="contact-section">
+        <div className="contact-grid">
+          <div className="contact-copy">
+            <p className="eyebrow">Start a conversation</p>
+            <h1>
+              What’s next
+              <br />
+              for your home?
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-(--muted)">
-              Share what you need cleaned, the property or vehicle location,
-              and any details that will help us review the job and prepare your estimate.
+            <p>
+              Share a little about your space, your ideas, and where you are in
+              the planning. It’s a place to begin.
             </p>
+            <div className="contact-info">
+              <span className="eyebrow">Reach Joshua Strother</span>
+              <a href={siteConfig.contact.emailHref}>
+                {siteConfig.contact.email}
+              </a>
+              <p>Greater Des Moines &amp; Central Iowa</p>
+            </div>
           </div>
-          <div className="min-w-64 border-l-4 border-(--blue) pl-6">
-            <p className="font-heading text-lg font-bold text-(--navy)">Call or text</p>
-            <a href={siteConfig.contact.phoneHref} className="mt-2 block font-heading text-3xl font-extrabold text-(--navy) hover:text-(--blue-hover)">
-              {siteConfig.contact.phone}
-            </a>
-            <div className="mt-5"><Button href={siteConfig.contact.smsHref} variant="secondary">Text Squeaky Clean</Button></div>
+          <div className="contact-form-panel">
+            <h2>Tell us about your project.</h2>
+            <InquiryForm />
           </div>
         </div>
       </Section>
-      <Section tone="white"><ContactCtaSection /></Section>
-      <Section tone="blue"><LocationSection /></Section>
+      <Section tone="white">
+        <LocationSection />
+      </Section>
     </main>
   );
 }
