@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f1;
+  --surface: #ffffff;
+  --surface-soft: #f1ede7;
+  --surface-blue: #fff0e3;
+  --foreground: #272321;
+  --muted: #6f6862;
+  --navy: #262220;
+  --navy-deep: #171513;
+  --blue: #f57305;
+  --blue-hover: #b84b00;
+  --blue-light: #ffc08a;
+  --text-on-dark: #ffffff;
+  --muted-on-dark: #ded8d2;
+  --subtle-on-dark: #aaa19a;
+  --focus: var(--blue);
+  --border: #d6cfc9;
+  --border-warm: #e3ddd7;
+  --container-width: 1240px;
+  --radius-sm: 7px;
+  --radius-md: 11px;
+  --radius-lg: 17px;
+  --shadow-sm: 0 6px 16px rgba(38, 34, 32, 0.07);
+  --shadow-lg: 0 14px 36px rgba(38, 34, 32, 0.14);
+}
+
+@theme inline {
+  --font-sans: var(--font-barlow);
+  --font-heading: var(--font-barlow-condensed);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+main {
+  flex: 1;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--surface);
+}
+
+::selection {
+  background: var(--blue);
+  color: var(--navy-deep);
+}
+
+.field {
+  min-height: 3rem;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  padding: 0.75rem 0.875rem;
+  color: var(--foreground);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 18%, transparent);
+  outline: none;
+}
+
+.field:disabled {
+  border-color: var(--border);
+  background: var(--surface-soft);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.field::placeholder {
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
