@@ -6,21 +6,27 @@ import WhyStrother from "@/components/sections/WhyStrother";
 import LocationSection from "@/components/sections/LocationSection";
 import ContactCtaSection from "@/components/sections/ContactCtaSection";
 import Section from "@/components/ui/Section";
+import CredibilityStrip from "@/components/sections/CredibilityStrip";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 export default function Home() {
   return (
     <main id="main-content">
       <Hero />
-      <Section id="introduction">
-        <AboutIntro />
-      </Section>
-      <Section id="our-work" tone="white">
+      <CredibilityStrip />
+      <Section id="our-work" tone="white" className="home-work">
         <ProjectShowcase />
+      </Section>
+      <Section id="homeowner-stories" tone="stone" className="home-proof">
+        <TestimonialsSection />
       </Section>
       <Section id="services">
         <ServicesSection />
       </Section>
-      <Section tone="stone">
-        <WhyStrother />
+      <Section id="introduction" tone="white">
+        <AboutIntro />
+      </Section>
+      <Section tone="stone" className="home-approach">
+        <WhyStrother condensed />
       </Section>
       <Section id="service-area">
         <LocationSection />

@@ -7,7 +7,6 @@ export default function ServicesSection() {
     <>
       <div className="section-heading">
         <div>
-          <p className="eyebrow">Our remodeling focus</p>
           <h2>
             Five ways to make
             <br />

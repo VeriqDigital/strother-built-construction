@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
 import { projects } from "@/data/projects";
-import Arrow from "@/components/ui/Arrow";
 export default function ProjectShowcase() {
   return (
     <>
@@ -35,16 +33,9 @@ export default function ProjectShowcase() {
                 <span className="project-category">{project.category}</span>
                 <h3>{project.title}</h3>
               </div>
-              <span className="project-number">0{index + 1}</span>
             </figcaption>
           </figure>
         ))}
-      </div>
-      <div className="gallery-end">
-        <p>What would you change about your home?</p>
-        <Link className="text-link" href="/contact">
-          Let’s Talk About Your Project <Arrow />
-        </Link>
       </div>
     </>
   );

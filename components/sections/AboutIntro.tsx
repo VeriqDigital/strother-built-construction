@@ -5,7 +5,6 @@ export default function AboutIntro() {
   return (
     <div className="intro-grid">
       <div className="intro-copy">
-        <p className="eyebrow">A more considered home</p>
         <h2>
           Keep what you love.
           <br />
@@ -33,10 +32,6 @@ export default function AboutIntro() {
             sizes="(max-width: 767px) 100vw, 48vw"
           />
         </div>
-        <figcaption>
-          <span>Room to move. Space to settle in.</span>
-          <span>STROTHER BUILT</span>
-        </figcaption>
       </figure>
     </div>
   );

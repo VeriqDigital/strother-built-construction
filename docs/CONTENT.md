@@ -17,6 +17,10 @@ The mockup may use clearly labeled draft marketing copy, but it must not present
 
 ## 1. Business Identity
 
+### September 16, 2026 proof update
+
+The latest client brief confirms the 4.9 Google rating with 28 reviews and four 2025 CommunityVotes Ankeny recognitions, and authorizes reuse of genuine Strother testimonials. See `PROOF.md` for evidence, attribution, and the exact scope; `data/proof.ts` is the editable source for homepage proof. Earlier blanket deferrals of awards/reviews below no longer apply to these specific confirmed items. Other unverified claims remain excluded. No review/rating schema is authorized.
+
 ### Current concept implementation notes
 
 - User supplied `public/kitchen.jpg`, `bathroom.jpg`, `bathroom2.jpg`, `basement.jpg`, `bathtub1.jpg`, `bathtub2.jpg`, `bathtub3.jpg`, `house.jpg`, `patio.jpg`, and the SBC logo for this concept. Descriptive labels refer only to visible rooms/details; project dates, addresses, budgets, and scopes remain unknown.

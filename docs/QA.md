@@ -1,5 +1,22 @@
 # Strother concept — implementation and verification
 
+## Internal testimonials page
+
+- Added `/testimonials` and changed the homepage's existing Read More Testimonials link to internal navigation. No header, homepage quote, or footer redesign.
+- Seven authentic excerpts: one featured basement-finishing Google review and six selected testimonials from Strother's existing content. Source and attribution notes are in `PROOF.md`. No excluded small-job reviews or fabricated project types.
+- Shared, editable 4.9 / 28 Google snapshot and verified Google listing destination live in `data/proof.ts`. The secondary Google link opens a new tab; no visible old-site link remains. No Review or AggregateRating schema added.
+- Checked internal navigation, seven semantic quotations/attributions, source labels, noindex, responsive layouts at 375/768/1440/1920px, no overflow, and no browser exceptions. Reviewed desktop/tablet/mobile screenshots in ignored `.qa/testimonials-*`.
+- `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed; `/testimonials` prerenders with the other mockup routes.
+
+## Proof and hierarchy update
+
+- Hero → compact review/recognition rail → existing asymmetric work gallery → curated customer testimonials → five services → repositioned intro → condensed approach → service area → closing CTA → footer.
+- Added the client-confirmed Google snapshot and four 2025 CommunityVotes recognitions as text. Rating/count are maintained together in `data/proof.ts`; sources and testimonial-selection notes are in `PROOF.md`.
+- Used exact, attributed excerpts from Strother's published testimonials. Kept the existing project photography and non-clickable gallery. Removed the gallery's redundant contact prompt and condensed later generic trust messaging to offset the new proof content.
+- Preserved the approved hero and the user's existing hero/intro edits, five-service presentation, palette, type system, and closing CTA/footer. The About route retains its previous approach treatment.
+- Responsive browser checks at 375, 768, 1440, and 1920px: no overflow, broken images, runtime errors, raw-image gallery links, or review/rating schema. Reviewed recognition wrapping, quote layout, project imagery, approach crop, hero, and footer. Navigation and inquiry interactions passed. Screenshots and report: ignored `.qa/proof-*`.
+- `npm run lint`, `npx tsc --noEmit`, and `npm run build` passed after this update. At 1440px the work section starts at 1106px instead of 1720px; the total page height changes from 7225px to 7351px (under 2%).
+
 ## Final mockup cleanup
 
 - Made gallery photographs non-clickable; removed raw-image links, the “View photograph” overlays, and their hover zoom. No project-detail route exists, and none was added.
@@ -48,4 +65,4 @@ The interactive browser connector was unavailable. Responsive verification used 
 5. Approved project scopes, locations, and stories, especially whole-home renovations and additions.
 6. Final copy, CTA, brand palette approval, and any secondary services to retain.
 
-Detailed process, testimonials, statistics, awards, credentials, financing, secondary service claims, and phone are intentionally omitted pending confirmation. The provided award graphic is not used. No budget selector, real inquiry delivery, CMS, production canonical/sitemap, indexing, publishing, or infrastructure changes were introduced. These require a later approved phase.
+Detailed process, credentials, financing, secondary service claims, and phone remain omitted pending confirmation. The newly confirmed rating, awards, and selected testimonials are now included as documented in `PROOF.md`; the raw award photograph is not displayed. No budget selector, real inquiry delivery, CMS, production canonical/sitemap, indexing, publishing, or infrastructure changes were introduced. These require a later approved phase.

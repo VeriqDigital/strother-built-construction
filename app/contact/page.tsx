@@ -13,7 +13,6 @@ export default function ContactPage() {
       <Section className="contact-section">
         <div className="contact-grid">
           <div className="contact-copy">
-            <p className="eyebrow">Start a conversation</p>
             <h1>
               What’s next
               <br />

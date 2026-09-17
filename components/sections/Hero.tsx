@@ -37,12 +37,6 @@ export default function Hero() {
           </Link>
         </div>
       </Container>
-      <Container className="hero-bottom">
-        <span>YOUR HOME. ITS NEXT CHAPTER.</span>
-        <a href="#introduction">
-          Discover Strother <span aria-hidden="true">↓</span>
-        </a>
-      </Container>
     </section>
   );
 }
