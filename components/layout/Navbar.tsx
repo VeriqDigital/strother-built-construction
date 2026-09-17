@@ -52,7 +52,7 @@ export default function Navbar() {
             alt="Strother Built Construction"
             width={600}
             height={125}
-            sizes="(max-width: 600px) 190px, 245px"
+            sizes="(max-width: 374px) 185px, (max-width: 767px) 220px, (max-width: 959px) 250px, (max-width: 1199px) 240px, 275px"
           />
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">

@@ -26,7 +26,7 @@ export default function ServicesSection() {
             fill
             sizes="(max-width: 767px) 100vw, 40vw"
           />
-          <span>Good spaces begin with the details.</span>
+          <span>Tile, fixtures, and finishes that work together.</span>
         </div>
         <div className="service-list">
           {services.map((service, index) => (

@@ -29,8 +29,6 @@ export default function Hero() {
           Kitchens. Bathrooms. Basements.
           <br />
           Whole-home remodeling and additions.
-          <br />
-          Thoughtfully considered. Strother built.
         </p>
         <div className="hero-actions">
           <ProjectInquiry />

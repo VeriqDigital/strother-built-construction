@@ -222,7 +222,7 @@ img {
 }
 .brand {
   display: block;
-  width: 245px;
+  width: 275px;
   flex-shrink: 0;
 }
 .brand img {
@@ -388,16 +388,12 @@ img {
 }
 .photo img {
   object-fit: cover;
-  transition: transform 0.6s;
-}
-a.photo:hover img {
-  transform: scale(1.025);
 }
 .intro-image .photo {
   aspect-ratio: 1.03;
 }
 .intro-image .photo img {
-  object-position: center;
+  object-position: center 40%;
 }
 .intro-image figcaption {
   display: flex;
@@ -440,10 +436,10 @@ a.photo:hover img {
   grid-column: 1/-1;
 }
 .project-wide .photo {
-  aspect-ratio: 1.95;
+  aspect-ratio: 1.5;
 }
 .project-wide .photo img {
-  object-position: center 61%;
+  object-position: center 25%;
 }
 .project-portrait .photo {
   aspect-ratio: 1.02;
@@ -475,15 +471,6 @@ a.photo:hover img {
 .project-number {
   font-size: 12px;
   color: var(--muted);
-}
-.photo-open {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  background: #f8f6f1;
-  padding: 8px 13px;
-  font-size: 12px;
-  letter-spacing: 0.01em;
 }
 .gallery-end {
   display: flex;
@@ -529,9 +516,12 @@ a.photo:hover img {
   display: grid;
   grid-template-columns: 25px 1fr 24px;
   gap: 20px;
-  padding: 23px 0;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
   align-items: start;
+  transition:
+    background-color 160ms,
+    border-color 160ms;
 }
 .service-number {
   font-size: 12px;
@@ -540,8 +530,13 @@ a.photo:hover img {
   padding-top: 5px;
 }
 .service-row h3 {
-  font-size: 24px;
+  font-size: 27px;
+  font-weight: 550;
   line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-color: #c8bfb2;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
 }
 .service-row p {
   font-size: 16px;
@@ -555,15 +550,26 @@ a.photo:hover img {
 }
 .service-more {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 .service-row:hover h3,
-.service-row:hover .arrow {
+.service-row:hover .arrow,
+.service-row:focus-visible h3,
+.service-row:focus-visible .arrow {
   color: #a7440a;
+}
+.service-row:hover,
+.service-row:focus-visible {
+  background: #eee8de;
+  border-bottom-color: #b76b35;
+}
+.service-row:hover h3,
+.service-row:focus-visible h3 {
+  text-decoration-color: currentColor;
 }
 .why-grid {
   display: grid;
@@ -574,10 +580,12 @@ a.photo:hover img {
 .why-photo {
   position: relative;
   min-height: 630px;
+  overflow: hidden;
 }
 .why-photo img {
   object-fit: cover;
-  object-position: 50% center;
+  object-position: 60% 48%;
+  transform: scale(1.2);
 }
 .why-copy > p:not(.eyebrow) {
   margin-top: 25px;
@@ -946,7 +954,7 @@ a.photo:hover img {
     gap: 28px;
   }
   .brand {
-    width: 210px;
+    width: 240px;
   }
   .desktop-nav {
     gap: 23px;
@@ -996,7 +1004,7 @@ a.photo:hover img {
     display: flex;
   }
   .brand {
-    width: 230px;
+    width: 250px;
   }
   .hero {
     height: calc(100svh - 80px);
@@ -1026,7 +1034,7 @@ a.photo:hover img {
     gap: 12px;
   }
   .service-row h3 {
-    font-size: 21px;
+    font-size: 23px;
   }
   .why-grid {
     gap: 35px;
@@ -1078,9 +1086,10 @@ a.photo:hover img {
   }
   .header-inner {
     padding-inline: 24px;
+    gap: 16px;
   }
   .brand {
-    width: 205px;
+    width: 220px;
   }
   .hero {
     min-height: 680px;
@@ -1177,11 +1186,6 @@ a.photo:hover img {
   .project h3 {
     font-size: 21px;
   }
-  .photo-open {
-    font-size: 11px;
-    bottom: 12px;
-    right: 12px;
-  }
   .gallery-end {
     display: block;
     margin-top: 35px;
@@ -1206,7 +1210,7 @@ a.photo:hover img {
     font-size: 13px;
   }
   .service-row {
-    padding-block: 22px;
+    padding-block: 26px;
     gap: 15px;
     grid-template-columns: 23px 1fr 20px;
   }
@@ -1348,7 +1352,7 @@ a.photo:hover img {
     padding-inline: 18px;
   }
   .brand {
-    width: 180px;
+    width: 185px;
   }
   .menu-toggle {
     padding-inline: 9px;

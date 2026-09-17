@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Keep the client concept free of Next.js's floating development control.
+  devIndicators: false,
   images: {
     qualities: [75, 100],
   },

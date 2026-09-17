@@ -11,21 +11,14 @@ export default function ProjectShowcase() {
           <h2>Spaces made for living.</h2>
         </div>
         <p>
-          Real rooms. Thoughtful details.
-          <br />
-          Explore the Strother project collection.
+          A selection of kitchens, bathrooms, and living spaces from Strother’s
+          project collection.
         </p>
       </div>
       <div className="project-grid">
         {projects.map((project, index) => (
           <figure className={`project ${project.className}`} key={project.src}>
-            <a
-              className="photo"
-              href={project.src}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`View full photograph: ${project.title} (opens in a new tab)`}
-            >
+            <div className="photo">
               <Image
                 src={project.src}
                 alt={project.alt}
@@ -36,10 +29,7 @@ export default function ProjectShowcase() {
                     : "(max-width: 767px) 100vw, 48vw"
                 }
               />
-              <span className="photo-open" aria-hidden="true">
-                View photograph ↗
-              </span>
-            </a>
+            </div>
             <figcaption>
               <div>
                 <span className="project-category">{project.category}</span>
@@ -51,7 +41,7 @@ export default function ProjectShowcase() {
         ))}
       </div>
       <div className="gallery-end">
-        <p>What could your next chapter look like?</p>
+        <p>What would you change about your home?</p>
         <Link className="text-link" href="/contact">
           Let’s Talk About Your Project <Arrow />
         </Link>

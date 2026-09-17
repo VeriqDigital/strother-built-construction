@@ -1,24 +1,25 @@
-// Supplied Strother photographs. Labels describe visible subjects, not unverified scopes.
+// Photographs from Strother's published project galleries; see docs/PHOTOGRAPHY.md.
+// Labels describe visible subjects, not unverified project scopes or locations.
 export const projects = [
   {
-    src: "/kitchen.jpg",
-    alt: "White kitchen with a central island, black stools, pendant lighting, and wood flooring",
+    src: "/strother-blue-kitchen.jpg",
+    alt: "Blue kitchen cabinetry, a white island, brass faucet, and pendant lights above wood flooring",
     title: "A place to come together",
     category: "Kitchen",
     className: "project-wide",
   },
   {
-    src: "/bathroom.jpg",
-    alt: "Bathroom with a white vanity, black fixtures, and warm terracotta shower tile",
+    src: "/strother-glass-tile-shower.jpg",
+    alt: "Glass-enclosed shower with white subway tile, dark trim, and a recessed tile niche",
     title: "Character in the details",
     category: "Bathroom",
     className: "project-portrait",
   },
   {
-    src: "/basement.jpg",
-    alt: "Finished basement with carpet, recessed lighting, and white doors",
+    src: "/strother-finished-living-room.jpg",
+    alt: "Finished living room with wood flooring, gray walls, white window trim, and seating",
     title: "Room for everyday living",
-    category: "Basement",
+    category: "Living space",
     className: "project-landscape",
   },
 ] as const;

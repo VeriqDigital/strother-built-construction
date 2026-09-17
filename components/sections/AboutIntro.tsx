@@ -12,13 +12,13 @@ export default function AboutIntro() {
           Rethink what’s possible.
         </h2>
         <p>
-          A home holds a lot of life. A remodel should make room for the way you
-          want to live next.
+          You may love your neighborhood and still need more from your home. A
+          remodel can give familiar spaces a better fit for everyday life.
         </p>
         <p>
-          Strother Built Construction focuses on the spaces that shape your
-          everyday: a kitchen that brings people together, a bathroom that feels
-          like your own, or the extra room your home has been missing.
+          Strother Built Construction focuses on the rooms you use most, from a
+          kitchen with room to gather to a renovation that brings the whole home
+          together.
         </p>
         <Link className="text-link" href="/about">
           Get to Know Strother <Arrow />
@@ -27,14 +27,14 @@ export default function AboutIntro() {
       <figure className="intro-image">
         <div className="photo">
           <Image
-            src="/bathroom.jpg"
-            alt="Warm tile and black hardware paired with a white vanity in a Strother bathroom"
+            src="/strother-connected-living-spaces.jpg"
+            alt="Connected living spaces with continuous wood flooring, white trim, and natural light"
             fill
             sizes="(max-width: 767px) 100vw, 48vw"
           />
         </div>
         <figcaption>
-          <span>Considered spaces. Personal details.</span>
+          <span>Room to move. Space to settle in.</span>
           <span>STROTHER BUILT</span>
         </figcaption>
       </figure>

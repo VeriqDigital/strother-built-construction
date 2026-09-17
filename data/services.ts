@@ -17,14 +17,15 @@ export const services: Service[] = [
     slug: "bathroom-remodeling",
     title: "Bathroom Remodeling",
     description:
-      "Thoughtful spaces that make the beginning and end of each day feel better.",
+      "A more comfortable daily routine, with room for the details you care about.",
     detail:
       "Bring comfort and purpose to your daily routine. Consider the layout, storage, and finishes that would make your bathroom feel more like your own.",
   },
   {
     slug: "basement-finishing",
     title: "Basement Finishing",
-    description: "Make room for more life in the home you already have.",
+    description:
+      "Put underused space to work for gathering, hobbies, or a quiet retreat.",
     detail:
       "Give an underused lower level a new purpose. Share how you imagine using it, whether that means room to gather, space to work, or somewhere to unwind.",
   },
@@ -32,7 +33,7 @@ export const services: Service[] = [
     slug: "whole-home-remodeling",
     title: "Whole-Home Remodeling",
     description:
-      "Bring your rooms together with a more cohesive way of living.",
+      "Connect your rooms with a layout and finishes that feel at home together.",
     detail:
       "Look at the home as a whole, from the way rooms connect to the details that carry from one space to the next. A larger renovation starts with a clear picture of what needs to change.",
   },
